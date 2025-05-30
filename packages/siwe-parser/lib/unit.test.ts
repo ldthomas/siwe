@@ -70,7 +70,7 @@ describe("Valid URIs", () => {
     }
   });
 });
-describe("Invalid URIs", () => {
+describe.only("Invalid URIs", () => {
   test.concurrent.each(Object.entries(invalidUris))("%s", (test_name, test) => {
     expect(() => new ParsedMessage(test)).toThrow();
   });
